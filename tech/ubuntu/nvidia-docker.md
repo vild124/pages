@@ -8,7 +8,7 @@
 
 ## 初期設定
 ### ネットワーク
-```bash
+```shell-session
 $ sudo apt-get -y install resolvconf
 
 $ sudo nmcli con mod eno1 ipv4.method manual
@@ -20,14 +20,14 @@ $ sudo nmcli con down eno1 && sudo nmcli con up eno1
 ```
 
 ### アップデート
-```bash
+```shell-session
 $ sudo apt-get update
 $ sudo apt-get -y upgrade
 $ sudo apt-get -y dist-upgrade
 ```
 
 ### OpenSSHのインストール
-```bash
+```shell-session
 $ sudo apt-get -y install openssh-server
 
 $ sudo systemctl start sshd
@@ -37,7 +37,7 @@ $ sudo systemctl enable sshd
 ## CUDA
 ### 確認
 以下のコマンドで，何も出てこないことを確認する
-```bash
+```shell-session
 $ sudo dpkg -l | grep nvidia
 $ sudo dpkg -l | grep cuda
 ```
@@ -46,7 +46,7 @@ $ sudo dpkg -l | grep cuda
 リポジトリ([Proprietary GPU Drivers : “Graphics Drivers” team](https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa))  
 を登録して，ドライバをインストールする  
 途中で，secure bootを無効にするかを聞かれたが，無効にせずに続行した
-```bash
+```shell-session
 $ sudo add-apt-repository ppa:graphics-drivers/ppa
 $ sudo apt-get update
 
@@ -54,7 +54,7 @@ $ sudo apt-get -y install nvidia-387
 ```
 
 再起動し，GPUが認識されているかを確認
-```bash
+```shell-session
 $ sudo reboot
 
 $ nvidia-smi
@@ -84,7 +84,7 @@ Ubuntu公式リポジトリの`docker.io`では`nvidia-docker`を実行できな
 ので、[Get Docker CE for Ubuntu | Docker Documentation](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#set-up-the-repository)
 の通りにインストールする
 
-```bash
+```shell-session
 $ sudo apt-get install \
     apt-transport-https \
     ca-certificates \
@@ -103,7 +103,7 @@ $ sudo apt-get -y install docker-ce
 ## nvidia-dockerのインストール
 [GitHub - NVIDIA/nvidia-docker: Build and run Docker containers leveraging NVIDIA GPUs](https://github.com/NVIDIA/nvidia-docker)の通りにインストールする
 
-```bash
+```shell-session
 $ sudo apt-get -y install curl
 
 $ curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
@@ -116,7 +116,7 @@ $ sudo pkill -SIGHUP dockerd
 
 テスト(`nvidia-docker run --rm nvidia/cuda nvidia-smi`でもいける)
 
-```bash
+```shell-session
 $ docker run --runtime=nvidia --rm nvidia/cuda nvidia-smi
 Unable to find image 'nvidia/cuda:latest' locally
 latest: Pulling from nvidia/cuda
