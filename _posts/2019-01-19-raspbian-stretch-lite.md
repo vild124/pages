@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Raspbian Stretchをディスプレイなしでインストールする"
 date:   2019-1-19 19:00:00 -0700
 categories: raspberrypi
