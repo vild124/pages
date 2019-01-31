@@ -1,3 +1,12 @@
+---
+title:  "Ubuntu16.04でnvidia-dockerを動かす"
+date:   2019-1-12 15:00:00 -0900
+categories: ubuntu
+tags:
+- ubuntu
+- deep learning
+---
+
 # Ubuntu16.04でnvidia-dockerを動かす
 
 ## 構成
