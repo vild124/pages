@@ -2,7 +2,3 @@ theme: jekyll-theme-architect
 # markdown: redcarpet
 # redcarpet:
 #   extensions: [tables,autolink,strikethrough]
-hogeString: hogehoge
-hoge:
-  hage: hogehage
-  fuge: hogefuge
