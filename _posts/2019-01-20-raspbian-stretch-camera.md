@@ -1,7 +1,8 @@
 ---
 # layout: post
-title:  "Raspberry Piとウェブカメラでmotionを使う"
-date:   "2019-1-20 12:00:00"
+date:   2019-1-20 12:00:00 +0900
+title:  Raspberry Piとウェブカメラでmotionを使う
+description: Raspberry PiでのMotionの動かしかた
 categories: raspberrypi
 tags:
 - raspberrypi

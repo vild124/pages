@@ -1,6 +1,7 @@
 ---
-title:  "Raspbian Stretchをディスプレイなしでインストールする"
 date:   2019-1-19 19:00:00 -0900
+title:  Raspbian Stretchをディスプレイなしでインストールする
+description: Raspberry piの初期設定方法
 categories: raspberrypi
 tags:
 - raspberrypi

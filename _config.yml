@@ -2,3 +2,5 @@ theme: jekyll-theme-architect
 # markdown: redcarpet
 # redcarpet:
 #   extensions: [tables,autolink,strikethrough]
+gems:
+  - jekyll-seo-tag
