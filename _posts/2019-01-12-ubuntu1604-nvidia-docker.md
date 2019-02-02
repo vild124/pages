@@ -1,6 +1,6 @@
 ---
 layout: post
-date:   2019-1-12 15:00:00 -0900
+date:   2019-1-12 00:00:00 +0900
 title:  Ubuntu16.04でnvidia-dockerを動かす
 description: Ubuntu16.04へのnvidia-dockerのインストール方法
 categories: ubuntu
