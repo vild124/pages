@@ -1,6 +1,7 @@
 theme: jekyll-theme-leap-day
 exclude: [
-  docker-compose.yml
+  docker-compose.yml,
+  .gitignore
 ]
 plugins:
   - jekyll-seo-tag
