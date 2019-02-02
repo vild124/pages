@@ -1,3 +1,9 @@
+url: https://vild124.github.io
+title: プログラミングとかLinuxとかの備忘録
+subtitle: ""
+name: Vild
+description: プログラミング、Linuxでハマった箇所や環境構築のメモ
+
 theme: jekyll-theme-leap-day
 exclude: [
   docker-compose.yml,
