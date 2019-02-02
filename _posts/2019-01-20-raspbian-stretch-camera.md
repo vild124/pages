@@ -1,5 +1,5 @@
 ---
-# layout: post
+layout: post
 date:   2019-1-20 12:00:00 +0900
 title:  Raspberry Piとウェブカメラでmotionを使う
 description: Raspberry PiでのMotionの動かしかた
@@ -8,7 +8,6 @@ tags:
 - raspberrypi
 ---
 
-## Raspberry Piとウェブカメラでmotionを使う
 
 ### motionをインストール
 ```shell-session
@@ -46,4 +45,3 @@ $ sudo motion -n
 
 `Ctrl+C`で止めて、
 `/var/lib/motion`に画像が保存るはずなのでsftp等で確認する。
-

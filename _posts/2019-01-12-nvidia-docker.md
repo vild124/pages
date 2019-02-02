@@ -1,4 +1,5 @@
 ---
+layout: post
 date:   2019-1-12 15:00:00 -0900
 title:  Ubuntu16.04でnvidia-dockerを動かす
 description: Ubuntu16.04へのnvidia-dockerのインストール方法
@@ -8,16 +9,13 @@ tags:
 - deep learning
 ---
 
-# Ubuntu16.04でnvidia-dockerを動かす
-
-## 構成
-### ハードウェア
+### 構成
 - CPU: Core i7-6850K
 - GPU: ELSA GeForce GTX 1080 8GB GLADIAC *2台
 
 
-## 初期設定
-### ネットワーク
+### 初期設定
+#### ネットワーク
 ```shell-session
 $ sudo apt-get -y install resolvconf
 
@@ -29,14 +27,14 @@ $ sudo nmcli con mod eno1 ipv4.gateway 192.168.1.1
 $ sudo nmcli con down eno1 && sudo nmcli con up eno1
 ```
 
-### アップデート
+#### アップデート
 ```shell-session
 $ sudo apt-get update
 $ sudo apt-get -y upgrade
 $ sudo apt-get -y dist-upgrade
 ```
 
-### OpenSSHのインストール
+#### OpenSSHのインストール
 ```shell-session
 $ sudo apt-get -y install openssh-server
 
@@ -44,15 +42,15 @@ $ sudo systemctl start sshd
 $ sudo systemctl enable sshd
 ```
 
-## CUDA
-### 確認
+### CUDA
+#### 確認
 以下のコマンドで，何も出てこないことを確認する
 ```shell-session
 $ sudo dpkg -l | grep nvidia
 $ sudo dpkg -l | grep cuda
 ```
 
-### Nvidiaドライバのインストール
+#### Nvidiaドライバのインストール
 リポジトリ([Proprietary GPU Drivers : “Graphics Drivers” team](https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa))  
 を登録して，ドライバをインストールする  
 途中で，secure bootを無効にするかを聞かれたが，無効にせずに続行した
@@ -88,7 +86,7 @@ Sat Dec  9 10:19:09 2017
 ```
 
 
-## dockerのインストール
+### dockerのインストール
 Ubuntu公式リポジトリの`docker.io`では`nvidia-docker`を実行できない
 (`docker-engine`, `docker-ce`, `docker-ee`のいずれかのパッケージが依存関係として必要)
 ので、[Get Docker CE for Ubuntu | Docker Documentation](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#set-up-the-repository)
@@ -110,7 +108,7 @@ $ sudo apt-get -y install docker-ce
 ```
 
 
-## nvidia-dockerのインストール
+### nvidia-dockerのインストール
 [GitHub - NVIDIA/nvidia-docker: Build and run Docker containers leveraging NVIDIA GPUs](https://github.com/NVIDIA/nvidia-docker)の通りにインストールする
 
 ```shell-session
@@ -159,4 +157,3 @@ Sat Dec  9 01:59:36 2017
 |=============================================================================|
 +-----------------------------------------------------------------------------+
 ```
-
