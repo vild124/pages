@@ -10,7 +10,7 @@ tags:
 - openvpn
 ---
 
-...  
+{{ site.baseurl }}{% post_url 2019/02/2019-02-15-docker-openvpn %}
 で構築したOpenVPNサーバに接続する時に接続はできるが下の警告が出るので、出ないように設定したい。
 
 __警告内容__
