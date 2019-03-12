@@ -3,6 +3,7 @@ title: プログラミングとかLinuxとかの備忘録
 subtitle: ""
 name: Vild
 description: プログラミング、Linuxでハマった箇所や環境構築のメモ
+google_analytics: UA-66189739-2
 
 theme: jekyll-theme-leap-day
 exclude: [
