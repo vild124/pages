@@ -13,6 +13,18 @@
     <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
+    <!-- Google AdSense AutoAd-->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-3205736278137417",
+        enable_page_level_ads: true
+      });
+    </script>
+    <!-- Google AdSense AMP -->
+    <script async custom-element="amp-auto-ads"
+      src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
   </head>
   <body>
 
@@ -47,6 +59,10 @@
       <section>
         {{ content }}
 
+        <p><span style="font-size: 80%">スポンサーリンク</span></p>
+        <amp-auto-ads type="adsense"
+          data-ad-client="ca-pub-3205736278137417">
+        </amp-auto-ads>
       </section>
       <footer>
         <!-- {% if site.github.is_project_page %}
